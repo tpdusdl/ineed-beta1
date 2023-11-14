@@ -11,8 +11,13 @@ import Calender from './components/main/calender.svg';
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import { BrowserRouter } from "react-router-dom";
 
-import { auth } from './components/main/firebase_config.js';
+
+
+
+
+
 
 
 const todolistStyle = {
@@ -31,8 +36,20 @@ const CalenderStyle = {
   backgroundSize: 'cover',
 };
 
+
+
+
 export default function Main() {  
+
+
+  
+
+
+
+
+
   return(
+  
     <div className="Main">
       
       <img src={Logo} alt="Logo" /> {/* 이미지 파일 */}
@@ -41,7 +58,15 @@ export default function Main() {
       <img src={Logout} alt="Logout" /> {/* Logout SVG 이미지 */}
       <div style={todolistStyle}></div>
       <div style={CalenderStyle}>
+
       
+    
+
+
+
+
+
+
       </div>
       <FullCalendar
         plugins={[dayGridPlugin, googleCalendarPlugin]}
@@ -52,14 +77,11 @@ export default function Main() {
         }}
       />
 
-<button onClick={() => {
-                auth.signOut();
-                console.log('로그아웃 합니다');
-            }}>EXIT</button>
-
 
 
       
       </div>
+
+
   );
 }
